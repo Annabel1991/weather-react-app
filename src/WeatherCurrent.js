@@ -3,7 +3,7 @@ import DateFormat from "./DateFormat";
 import Icon from "./Icon";
 import TemperatureFormat from "./TemperatureFormat";
 
-export default function WeatherInfo(props) {
+export default function WeatherCurrent(props) {
   return (
     <div className="WeatherCurrent">
       <div className="row mt-3">
