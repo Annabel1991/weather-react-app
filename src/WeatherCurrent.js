@@ -5,9 +5,9 @@ import TemperatureFormat from "./TemperatureFormat";
 
 export default function WeatherInfo(props) {
   return (
-    <div className="WeatherInfo">
+    <div className="WeatherCurrent">
       <div className="row mt-3">
-      <div className="col-4">
+      <div className="col-5">
           <div className="d-flex">
       <h1>{props.data.city}</h1>
       <ul>
@@ -18,7 +18,7 @@ export default function WeatherInfo(props) {
       </ul>
       </div>
       </div>
-      <div className="col-4">
+      <div className="col-3">
           <div className="d-flex">
             <div>
               <Icon code={props.data.icon} size={55} />

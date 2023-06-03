@@ -8,23 +8,18 @@ export default function WeekForecast(props) {
   let [forecast, setForecast] = useState(null);
 
   useEffect(() => {
+    let apiKey = "54d11e99c53adac5dcd32b4969b4b1cf";
+    let longitude = props.coordinates.lon;
+    let latitude = props.coordinates.lat;
+    let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=imperial`;
     setLoaded(false);
+    axios.get(apiUrl).then(handleResponse);
   }, [props.coordinates]);
 
   function handleResponse(response) {
     setForecast(response.data.daily);
     setLoaded(true);
   }
-
-  function load() {
-    let apiKey = "54d11e99c53adac5dcd32b4969b4b1cf";
-    let longitude = props.coordinates.lon;
-    let latitude = props.coordinates.lat;
-    let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=imperial`;
-
-    axios.get(apiUrl).then(handleResponse);
-  }
-
   if (loaded) {
     return (
       <div className="WeekForecast">
@@ -36,16 +31,13 @@ export default function WeekForecast(props) {
                   <EachDay data={dailyForecast} />
                 </div>
               );
-            } else {
-              return null;
             }
+            return null;
           })}
         </div>
       </div>
     );
   } else {
-    load();
-
     return null;
   }
 }

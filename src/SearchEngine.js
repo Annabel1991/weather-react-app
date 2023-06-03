@@ -4,7 +4,7 @@ import "./styles.css";
 import WeatherCurrent from "./WeatherCurrent";
 import WeekForecast from "./WeekForecast";
 
-export default function Weather(props) {
+export default function SearchEngine(props) {
     const [weatherData, setWeatherData] = useState({ ready: false });
     const [city, setCity] = useState(props.defaultCity);
   
@@ -39,7 +39,7 @@ export default function Weather(props) {
   
     if (weatherData.ready) {
       return (
-        <div className="Weather">
+        <div className="SearchEngine">
           <form onSubmit={handleSubmit}>
             <div className="row">
               <div className="col-9">
