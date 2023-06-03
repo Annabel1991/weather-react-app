@@ -19,7 +19,7 @@ export default function WeatherCurrent(props) {
       </div>
       <div className="col-3">
               <Icon code={props.data.icon} size={55} />
-              <TemperatureFormat celsius={props.data.temperature} />
+              <TemperatureFormat fahrenheit={props.data.temperature} />
             </div>
         <div className="col-4">
           <ul>
