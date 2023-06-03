@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
+import "./WeekForecast.css";
 import axios from "axios";
 import EachDay from "./EachDay";
 
-export default function Forecast(props) {
+export default function WeekForecast(props) {
   let [loaded, setLoaded] = useState(false);
   let [forecast, setForecast] = useState(null);
 
@@ -26,7 +27,7 @@ export default function Forecast(props) {
 
   if (loaded) {
     return (
-      <div className="Forecast">
+      <div className="WeekForecast">
         <div className="row">
           {forecast.map(function (dailyForecast, index) {
             if (index < 5) {
