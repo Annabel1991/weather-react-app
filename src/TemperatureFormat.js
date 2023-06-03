@@ -2,14 +2,17 @@ import React, { useState } from 'react';
 
 export default function TemperatureFormat(props) {
   const [unit, setUnit] = useState("fahrenheit");
-  function showFahrenheit(event) {
-    event.preventDefault();
-    setUnit("fahrenheit");
-  }
-  function showCelsius(event) {
+
+  function convertToCelsius(event) {
     event.preventDefault();
     setUnit("celsius");
   }
+
+  function convertToFahrenheit(event) {
+    event.preventDefault();
+    setUnit("fahrenheit");
+  }
+
   function celsius() {
     return (props.fahrenheit - 32) * 5 / 9;
   }
@@ -18,10 +21,10 @@ export default function TemperatureFormat(props) {
       <div className="TemperatureFormat">
         <span className="temperature">{Math.round(celsius())}</span>
         <span className="unit">
-          <a href="/" onClick={showCelsius}>
-            {" "}°C
-          </a>{" "}
-          | °F
+          °C |{" "}
+          <a href="/" onClick={convertToFahrenheit}>
+            °F
+          </a>
         </span>
       </div>
     );
@@ -30,10 +33,10 @@ export default function TemperatureFormat(props) {
       <div className="TemperatureFormat">
         <span className="temperature">{Math.round(props.fahrenheit)}</span>
         <span className="unit">
-          ° C |{" "}
-          <a href="/" onClick={showFahrenheit}>
-            °F
-          </a>
+          <a href="/" onClick={convertToCelsius}>
+            °C
+          </a>{" "}
+          | °F
         </span>
       </div>
     );
