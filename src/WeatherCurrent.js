@@ -14,8 +14,8 @@ export default function WeatherCurrent(props) {
         <TemperatureFormat fahrenheit={props.data.temperature} />
          </div>
       <div className="col-4">
-              <Icon code={props.data.icon} size={55} />
-              <span className="text-capitalize">{props.data.description}</span>
+              <Icon code={props.data.icon} size={85} />
+              <strong>{props.data.description}</strong>
             </div>
         <div className="col-4">
           <ul>
