@@ -8,7 +8,7 @@ export default function WeekForecast(props) {
   let [forecast, setForecast] = useState(null);
 
   useEffect(() => {
-    let apiKey = "54d11e99c53adac5dcd32b4969b4b1cf";
+    let apiKey = "3980a7c8f2a782241a093131b099f993";
     let longitude = props.coordinates.lon;
     let latitude = props.coordinates.lat;
     let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=imperial`;

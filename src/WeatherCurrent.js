@@ -3,6 +3,7 @@ import DateFormat from "./DateFormat";
 import Icon from "./Icon";
 import TemperatureFormat from "./TemperatureFormat";
 
+
 export default function WeatherCurrent(props) {
   return (
     <div className="WeatherCurrent">
@@ -24,7 +25,7 @@ export default function WeatherCurrent(props) {
         <div className="col-4">
           <ul>
             <li>Humidity: {props.data.humidity}%</li>
-            <li>Wind: {props.data.wind} m/ph</li>
+            <li>Wind: {Math.round(props.data.wind)} m/ph</li>
           </ul>
         </div>
       </div>
