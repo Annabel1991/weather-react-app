@@ -8,18 +8,14 @@ export default function WeatherCurrent(props) {
   return (
     <div className="WeatherCurrent">
       <div className="row">
-      <div className="col-5">
+      <div className="col-4">
        <h1 className="text-capitalize">{props.data.city}</h1>
-      <ul>
-        <li>
-          <DateFormat date={props.data.date} />
-        </li>
-        <li className="text-capitalize">{props.data.description}</li>
-      </ul>
-      </div>
-      <div className="col-3">
+        <DateFormat date={props.data.date} />
+        <TemperatureFormat fahrenheit={props.data.temperature} />
+         </div>
+      <div className="col-4">
               <Icon code={props.data.icon} size={55} />
-              <TemperatureFormat fahrenheit={props.data.temperature} />
+              <span className="text-capitalize">{props.data.description}</span>
             </div>
         <div className="col-4">
           <ul>
