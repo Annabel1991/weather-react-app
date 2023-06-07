@@ -23,7 +23,7 @@ export default function WeekForecast(props) {
   if (loaded) {
     return (
       <div className="WeekForecast">
-        <div className="row">
+        <div className="row mt-2">
           {forecast.map(function (dailyForecast, index) {
             if (index < 5) {
               return (

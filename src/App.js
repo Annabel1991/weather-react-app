@@ -5,9 +5,9 @@ export default function App() {
   return (
     <div className="App">
       <div className="container">
-        <SearchEngine defaultCity="New York" />
+        <SearchEngine defaultCity="London" />
 
-        <footer>
+        <footer className="text-center small mt-4">
   <p>
     This project was coded by Anna Bilokon and is {" "}
     <a href="https://github.com/Annabel1991/weather-react-app">open-sourced on GitHub</a>{" "}

@@ -1,12 +1,20 @@
 .App {
   max-width: 600px;
   margin: 30px auto;
-  font-family: sans-serif;
-  color: #bfc1c2;
+  background: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
+  color: #4f81c7;
+  font-family: "Poppins", sans-serif;
 }
 
 .App footer {
   font-size: 11px;
   margin: 10px 0;
-  color:grey;
+  color:#4f81c7;
 }
+a {color: #fdb44b;
+  text-decoration: none;
+}
+a:hover{
+  font-weight: bold;
+}
+

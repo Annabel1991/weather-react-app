@@ -4,6 +4,7 @@ import Icon from "./Icon";
 import TemperatureFormat from "./TemperatureFormat";
 
 
+
 export default function WeatherCurrent(props) {
   return (
     <div className="WeatherCurrent">
@@ -13,8 +14,9 @@ export default function WeatherCurrent(props) {
         <DateFormat date={props.data.date} />
         <TemperatureFormat fahrenheit={props.data.temperature} />
          </div>
-      <div className="col-4">
+      <div className="col-4 text-center mt-2">
               <Icon code={props.data.icon} size={85} />
+              <br/>
               <strong>{props.data.description}</strong>
             </div>
         <div className="col-4">

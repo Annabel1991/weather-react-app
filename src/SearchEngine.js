@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import axios from "axios";
-import "./styles.css";
+import "./mainWeather.css";
 import WeatherCurrent from "./WeatherCurrent";
 import WeekForecast from "./WeekForecast";
 
 export default function SearchEngine(props) {
     const [weatherData, setWeatherData] = useState({ ready: false });
     const [city, setCity] = useState(props.defaultCity);
-  
+      
     function handleResponse(response) {
       setWeatherData({
         ready: true,
@@ -30,13 +30,13 @@ export default function SearchEngine(props) {
     function handleCityChange(event) {
       setCity(event.target.value);
     }
-  
-    function search() {
+
+      function search() {
       const apiKey = "54d11e99c53adac5dcd32b4969b4b1cf";
       let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`;
       axios.get(apiUrl).then(handleResponse);
     }
-  
+     
     if (weatherData.ready) {
       return (
         <div className="SearchEngine">
@@ -45,21 +45,21 @@ export default function SearchEngine(props) {
               <div className="col-9">
                 <input
                   type="search"
-                  placeholder="Enter a city.."
+                  placeholder="Enter your city.."
                   className="form-control"
                   autoFocus="on"
                   onChange={handleCityChange}
                 />
               </div>
-              <div className="col-3">
+              <div className="col-sm-3 mt-2 mt-sm-0 ps-sm-2">
                 <input
                   type="submit"
                   value="Search"
-                  className="btn btn-primary w-100"
+                  className="btn btn-grey-primary w-100"
                 />
               </div>
-            </div>
-          </form>
+              </div>
+      </form>
           <WeatherCurrent data={weatherData} />
           <WeekForecast coordinates={weatherData.coordinates} />
         </div>
