@@ -76,3 +76,7 @@ input.placeholder {
 .TemperatureFormat{
   margin-top: 10px;
 }
+@media (max-width: 900px) {
+  .SearchEngine .temperature { 
+    font-size: 26px;  
+}}
