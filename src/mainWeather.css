@@ -1,9 +1,12 @@
 .SearchEngine {
   font-family: "Poppins", sans-serif;
-  border: 1px solid #dadde1;
+  border: 2px solid #abc9f0;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   padding: 16px;
   border-radius: 4px;
-  color: #fdb44b;
+  color:  #656af7;
+  
 }
 
 .SearchEngine h1 {
@@ -29,7 +32,7 @@
 
 .SearchEngine .temperature {
   font-weight: bold;
-  color: #fdb44b;
+  color:  #656af7;
   font-size: 56px;
   line-height: 58px;
   margin-left: 5px;
@@ -42,7 +45,7 @@
 }
 
 .SearchEngine .unit {
-  color:  #fdb44b;
+  color:  #656af7;
   font-size: 16px;
   font-weight: 400;
   position: relative;
@@ -54,8 +57,8 @@
   }
   
   .btn {
-    background: #005792;
-    border: 1px solid #00204a;
+    background: #3C8DE9;
+    border: 1px solid #656af7;
     color: #FAF0EC;
     transition: all 200ms ease-in-out;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
