@@ -3,10 +3,9 @@
 .App {
   max-width: 600px;
   margin: 30px auto;
-  background-color: rgba(255, 255, 255, 0.6);
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   background-blend-mode: overlay;
-  color: #3C8DE9;
+  color: #537188;
   font-family: "Poppins", sans-serif;
   border-radius: 8px;
 }
@@ -14,12 +13,13 @@
 .App footer {
   font-size: 11px;
   margin: 10px 0;
-  color:#3C8DE9;
+  color:#537188;
 }
-a {color: #1c7deb;
+a {color: #537188;
   text-decoration: none;
 }
 a:hover{
+  color: azure;
   font-weight: bold;
 }
 
